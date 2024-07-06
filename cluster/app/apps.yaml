@@ -10,7 +10,7 @@ spec:
   sourceRef:
     kind: GitRepository
     name: hello-wold-prod
-  path: ./app/prod
+  path: ./app
   prune: true
   wait: true
   timeout: 5m0s
@@ -26,7 +26,7 @@ spec:
   sourceRef:
     kind: GitRepository
     name: hello-wold-dev
-  path: ./app/dev
+  path: ./app
   prune: true
   wait: true
   timeout: 5m0s
