@@ -4,7 +4,7 @@ metadata:
   name: hello-wold-prod
   namespace: prod
 spec:
-  url: https://github.com/yevgen-grytsay/flux-multibranch-multienv-example-app
+  url: https://github.com/yevgen-grytsay/flux-multi-branch-multi-env-app
   interval: 1m0s
   ref:
     branch: main
