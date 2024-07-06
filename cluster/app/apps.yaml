@@ -1,0 +1,32 @@
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: app-prod
+  namespace: prod
+spec:
+  targetNamespace: prod
+  interval: 1m0s
+  sourceRef:
+    kind: GitRepository
+    name: hello-wold-prod
+  path: ./app/prod
+  prune: true
+  wait: true
+  timeout: 5m0s
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: app-dev
+  namespace: dev
+spec:
+  targetNamespace: dev
+  interval: 1m0s
+  sourceRef:
+    kind: GitRepository
+    name: hello-wold-dev
+  path: ./app/dev
+  prune: true
+  wait: true
+  timeout: 5m0s
