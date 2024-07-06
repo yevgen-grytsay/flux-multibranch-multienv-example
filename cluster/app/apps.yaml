@@ -9,7 +9,7 @@ spec:
   interval: 1m0s
   sourceRef:
     kind: GitRepository
-    name: hello-wold-prod
+    name: hello-world-prod
   path: ./app
   prune: true
   wait: true
@@ -25,7 +25,7 @@ spec:
   interval: 1m0s
   sourceRef:
     kind: GitRepository
-    name: hello-wold-dev
+    name: hello-world-dev
   path: ./app
   prune: true
   wait: true

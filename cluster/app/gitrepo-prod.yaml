@@ -1,7 +1,7 @@
 apiVersion: source.toolkit.fluxcd.io/v1
 kind: GitRepository
 metadata:
-  name: hello-wold-prod
+  name: hello-world-prod
   namespace: dev
 spec:
   url: https://github.com/yevgen-grytsay/flux-multi-branch-multi-env-app
@@ -9,4 +9,4 @@ spec:
   ref:
     branch: main
   secretRef:
-    name: hello-wold
+    name: hello-world
