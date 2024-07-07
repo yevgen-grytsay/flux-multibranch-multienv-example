@@ -16,6 +16,7 @@ export GITHUB_TOKEN
 
 # PAT with permissions "Contents: Read and Write"
 flux bootstrap github \
+ --components source-controller,kustomize-controller \
  --owner=yevgen-grytsay \
  --repository=flux-multibranch-multienv-example \
  --personal \
