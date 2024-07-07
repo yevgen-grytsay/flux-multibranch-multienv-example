@@ -11,7 +11,7 @@ spec:
     branch: main
   secretRef:
     name: flux-system
-  url: https://github.com/yevgen-grytsay/flux-multibranch-multienv-example.git
+  url: ssh://git@github.com/yevgen-grytsay/flux-multibranch-multienv-example
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
