@@ -8,7 +8,7 @@ metadata:
 spec:
   interval: 1m0s
   ref:
-    branch: main
+    branch: example-2
   secretRef:
     name: flux-system
   url: https://github.com/yevgen-grytsay/flux-multibranch-multienv-example.git
