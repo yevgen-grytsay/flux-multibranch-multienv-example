@@ -5,12 +5,12 @@ metadata:
   name: app-prod
   namespace: prod
 spec:
-  targetNamespace: prod
+  targetNamespace: prod-2
   interval: 1m0s
   sourceRef:
     kind: GitRepository
     name: hello-world-prod
-  path: ./app
+  path: ./prod
   prune: true
   wait: true
   timeout: 5m0s
@@ -21,12 +21,12 @@ metadata:
   name: app-dev
   namespace: dev
 spec:
-  targetNamespace: dev
+  targetNamespace: dev-2
   interval: 1m0s
   sourceRef:
     kind: GitRepository
     name: hello-world-dev
-  path: ./app
+  path: ./dev
   prune: true
   wait: true
   timeout: 5m0s

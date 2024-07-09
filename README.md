@@ -24,20 +24,6 @@ flux bootstrap github \
  --token-auth
 ```
 
-Після ініціалізації Flux, коли будуть створені неймспейси `prod` і `dev`, додати параметри доступу
-
-```sh
-kubectl create secret generic hello-world \
-    -n dev \
-    --from-literal=username=yevgen-grytsay \
-    --from-literal=password="${GITHUB_TOKEN}"
-
-kubectl create secret generic hello-world \
-    -n prod \
-    --from-literal=username=yevgen-grytsay \
-    --from-literal=password="${GITHUB_TOKEN}"
-```
-
 Так виглядають ресурси `GitRepository` в Kubernetes:
 
 ```
@@ -61,4 +47,17 @@ spec:
   url: https://github.com/yevgen-grytsay/flux-multi-branch-multi-env-app
   secretRef:
     name: hello-world
+```
+
+## Example #2
+
+```sh
+flux bootstrap github \
+ --components source-controller,kustomize-controller \
+ --owner=yevgen-grytsay \
+ --repository=flux-multibranch-multienv-example \
+ --branch=example-2 \
+ --personal \
+ --path=cluster \
+ --token-auth
 ```

@@ -2,9 +2,9 @@ apiVersion: source.toolkit.fluxcd.io/v1
 kind: GitRepository
 metadata:
   name: hello-world-dev
-  namespace: dev
+  namespace: dev-2
 spec:
   url: https://github.com/yevgen-grytsay/flux-multibranch-multienv-app
   interval: 1m0s
   ref:
-    branch: dev
+    branch: app-dev
