@@ -8,3 +8,5 @@ spec:
   interval: 1m0s
   ref:
     branch: main
+  secretRef:
+    name: my-vue-pwa
